@@ -1,2 +1,4 @@
 # CassoviaCodeTest
- Skušobný dizajn Cassovia Code
+ Vypracovanie zadania.
+ 
+ Cassovia Code
