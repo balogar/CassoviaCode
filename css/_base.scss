@@ -1,0 +1,172 @@
+// MIXINS
+
+@mixin offer-background($img_number, $url){
+    .offer-img-inner-#{$img_number}{
+        background-image: url(#{$url});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+}
+
+@mixin circle-color($color, $number){
+    .advantages-circle-#{$number}{
+        background-color: $color;
+    }
+}
+
+// BASE SCSS 
+
+.home{
+    background-image: url("../elements/img/introduction_background.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 15%;
+    padding-bottom: 5%;
+    p{
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #ffffff;
+    }
+}
+
+.about{
+    background-color:#F9FBFD;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    h2{
+        text-indent: 30px;
+    }
+}
+
+.offer{
+    .offer-container{
+        h3{
+            padding-left: 97px;
+        }
+    }
+    p{
+        padding-left: 90px;
+    }
+    .offer-img{
+        .offer-img-inner{
+            padding: 14px 11px;
+            box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
+            border-radius: 70px;
+            min-width: 70px;
+            min-height: 70px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include offer-background(1, "../elements/img/icons/playlist.png");
+        @include offer-background(2, "../elements/img/icons/business.png");
+        @include offer-background(3, "../elements/img/icons/music.png");
+        @include offer-background(4, "../elements/img/icons/customer.png");
+        @include offer-background(5, "../elements/img/icons/messages.png");
+        @include offer-background(6, "../elements/img/icons/admin.png");
+        @include offer-background(7, "../elements/img/icons/mobile.png");
+        @include offer-background(8, "../elements/img/icons/royalty.png");
+    }
+}
+
+.background-vector{
+    background-image: url("../elements/img/Vector.svg");
+}
+
+.benefits{
+    background-color: #F9FBFD;
+    .bulletin{
+            max-width: 318px;
+            height: auto;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.08);
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            padding: 20px;
+    }
+    ul li{
+        list-style-position: outside;
+        margin-left: 1em;
+        color: #4F4F4F;
+    }
+}
+
+.advantages{
+    background: linear-gradient(180deg, #4F57A6 0%, #8D54A2 100%);
+    h2, h3, p{
+        color:#FFFFFF;
+        
+    }
+    .advantages-circle{
+            border-radius: 50%;
+            height: 55px;
+            width: 55px;
+            padding-right: 3.437rem;
+    }
+    @include circle-color(#75C7CE, 1);
+    @include circle-color(#EBA721, 2);
+    @include circle-color(#B7CE27, 3);
+    @include circle-color(#E1EAF7, 4);
+    .music-circles-container{
+        margin: 5rem 0rem ;
+    }
+}
+
+.member{
+    background: url("../elements/img/banner.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    h2{
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+
+footer{
+    background-color: black;
+    color: #ffffff;
+    a{
+        color: #979797;
+        &:hover{
+            color: #ffffff;
+        }
+    }
+    ul, span{
+        font-family: Montserrat;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+    }
+    
+    .footer-custom{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .footer-border{
+        border-top: 0.2px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+

@@ -1,0 +1,39 @@
+@mixin vector_animation($vector_id, $animation, $time){
+    ##{$vector_id}{
+        animation: #{$animation} $time ease infinite alternate;
+        transform-origin: center;
+    }
+}
+
+@include vector_animation(one-blue-small, one_circle, 2.5s);
+@include vector_animation(two-blue-long, two_circle, 1.5s);
+@include vector_animation(three-blue, three_outer_circle, 4s);
+@include vector_animation(three-orange, three_inner_circle, 3s);
+@include vector_animation(four-blue, four_outer_circle, 4s);
+@include vector_animation(four-orange, four_inner_circle_1, 2s);
+@include vector_animation(four-green, four_inner_circle_2, 2s);
+@include vector_animation(five-blue, five_outer_circle, 3s);
+@include vector_animation(five-light-blue, five_outer_circle, 3s);
+@include vector_animation(five-green, five_inner_circle, 3s);
+@include vector_animation(five-orange, five_inner_circle, 3s);
+
+@mixin vector_animation($keyframe_id, $angle){
+    @keyframes #{$keyframe_id} {
+        from{
+            transform:rotate(0deg);
+        }
+        to{
+            transform:rotate($angle);
+        }
+    }
+}
+
+@include vector_animation(five_outer_circle, 360deg);
+@include vector_animation(five_inner_circle, -360deg);
+@include vector_animation(four_outer_circle, 220deg);
+@include vector_animation(four_inner_circle_1, 45deg);
+@include vector_animation(four_inner_circle_2, -45deg);
+@include vector_animation(three_inner_circle, -360deg);
+@include vector_animation(three_outer_circle, 360deg);
+@include vector_animation(two_circle, -180deg);
+@include vector_animation(one_circle, 220deg);

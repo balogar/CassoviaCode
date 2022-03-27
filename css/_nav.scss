@@ -1,0 +1,118 @@
+// SCSS OF NON BOOTSTRAP NAVIGATION
+
+nav{
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20px;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    transition: background-color 300ms ease-in-out;
+    
+    .logo{
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 20px;
+        position: relative;
+    }
+    .nav-links[data-visible = "true"]{
+        transform: translateX(0);
+    }
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 !important;
+        align-items: center;
+        .mobile{
+            display: none;
+        }
+        hr{
+            border: 1px solid #FFFFFF;
+            width: 20px;
+            transform: rotate(90deg);
+        }
+        .nav-item-round{
+            background-color: white;
+            border-radius: 28.05px;
+            padding: 2px;
+            a{
+                color: black !important; 
+                &:hover, .nav-link.active{
+                    color:black;
+                }
+            }
+        }
+        li{
+            list-style: none;
+            margin-right: 15px;
+            img{
+                vertical-align:baseline;
+                
+            }
+        }
+        button{
+            color:#4F57A6;
+            span{
+                color:#4F4F4F;
+            }
+        }
+
+        a, span{
+            font-family: Montserrat;
+            padding: 0px 10px;
+            color: white;
+            transition: 0.3s ease;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            &:hover, .nav-link.active{
+                
+                color: lightgrey;
+                
+            }
+        }
+    }
+    .burger{
+        display: none;
+        div{
+            width: 25px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.nav-active {
+    background: linear-gradient(180deg, #4F57A6 0%, #8D54A2 100%);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}

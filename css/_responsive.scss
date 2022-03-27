@@ -1,0 +1,336 @@
+// Media queries
+
+// 1
+
+@media screen and (max-width: 1200px) {
+    .about{
+        .about-body{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .about-text{
+                justify-content:center;
+                align-items: center;
+                margin-top: 2.5em;
+                h2{
+                    text-indent: 0px;
+                    text-align: center !important;
+                }
+                p{
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+    .benefits{
+        .benefits-body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .benefits-card{
+                justify-content: center;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+// 2
+
+@media screen and (max-width: 1100px) {
+    .advantages{
+        .music-circle-1{
+            display: none;
+        }
+    }
+}
+
+// 3
+
+@media screen and (max-width: 991px) {
+    .center-buttons{
+        div{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+    }
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        .nav-links{
+            position: absolute;
+            right: 0px;
+            height: 100vh;
+            top: 0vh;
+            background: linear-gradient(180deg, #4F57A6 0%, #8D54A2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start !important;
+            width: 90%;
+            transform: translateX(100%);
+            transition: transform 350ms ease-out;
+            justify-content:flex-start;
+            padding-left: 2.5rem;
+            padding-top: 1.2rem;
+            hr{
+                border: 1px solid #FFFFFF;
+                width: 90px;
+                transform: rotate(0deg);
+                margin: 5px 10px;
+                opacity: 0.1;
+            }
+            .mobile{
+                display:inline;
+            }
+            .mobile-menu-img, .nav-item-round{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            li{
+                opacity: 0;
+                margin-top: 12px;
+                
+                button{
+                    padding: 10px 20px;
+                    margin: 10px 0px;
+                    div{
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 17px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        color: #4F4F4F;
+                        
+                    }
+                }
+            }
+            .slovakia-img{
+                margin: 5px 10px;
+                span{
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    color: #ffffff;
+                }
+            }
+        }
+        .burger{
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+// 4
+
+@media screen and (max-width: 960px) {
+    .member{
+        background-size:cover;
+        background-position: center;
+    }
+}
+
+// 5
+
+@media screen and (max-width: 850px) {
+    .advantages{
+        .music-circles-container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1.25rem 0rem ;
+        }
+        .music-circle-1{
+            display: none;
+        }
+        
+    }
+}
+
+// 6
+
+@media screen and (max-width: 767px) {
+    h1{
+        font-family: Montserrat;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    h2{
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    h3{
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .home{
+        p{
+            font-family: Montserrat;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+    }
+
+    .offer{
+        .offer-container{
+            h3{
+                padding-left: 55px;
+                margin: 0;
+            }
+        }
+        p{
+            padding-left: 0px;
+            padding-top: 20px;
+        }
+        .offer-img{
+            align-items: center;
+            text-align: center !important;
+            .offer-img-inner{
+                
+                min-width: 45px;
+                min-height: 45px;
+            }
+        }
+    }
+
+    footer{
+        .footer-link{
+            display: flex;
+            flex-direction: column;
+        }
+        .company-connect{
+            flex-direction: column;
+        }
+        .footer-links{
+            justify-content: left !important;
+        }
+    }
+}
+
+// 7
+
+@media screen and (max-width: 425px) {
+    .home{
+        padding-top: 30%;
+    }
+    .offer{
+        .clear-padding{
+            padding: 0 !important;
+        }
+    }
+    .benefits{
+        .clear-padding{
+            padding: 0 !important;
+        }
+    }
+    .advantages{
+        .music-circles-container{
+            svg{
+                width: 100%;
+                height: 120px;
+            }
+        }
+        p{
+            display: none;
+        }
+        h3{
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        .advantages-point{
+            flex-direction: column;
+            margin: 0.5rem 0rem !important;
+        }
+        .advantages-circle{
+            border-radius: 53px;
+            height: 10px;
+            width: 10px;
+            padding-right: 5.437rem;
+            margin-bottom: 0.5rem;
+    }
+    }
+
+    .member{
+        h2{
+            font-family: Montserrat;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+    }
+    footer{
+        .footer-border{
+            border-top: none;
+            justify-content: left !important;
+            padding: 0 !important;
+            padding-top: 1.5rem !important;
+        }
+        .privacy-terms{
+            border-top: 0.2px solid rgba(255, 255, 255, 0.5);
+            padding-top: 0.5rem;
+        }
+        .privacy{
+            padding-right: 2rem;
+        }
+    }
+}
+
+// 8
+
+@media screen and (max-width: 320px) {
+    button{
+        padding: 5px 11px !important; 
+    }
+}
+
+// 9
+
+@media screen and (max-width: 270px) {
+    footer{
+        .footer-border{
+            border-top: 0.2px solid rgba(255, 255, 255, 0.5);
+            padding-top: 0rem !important;
+        }
+        .privacy-terms{
+            border-top: none;
+        }
+    }
+}
